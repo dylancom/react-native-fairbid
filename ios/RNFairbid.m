@@ -108,8 +108,8 @@ RCT_EXPORT_METHOD(showVideoForPlacementID:(NSString *)placementId callback:(RCTR
 RCT_EXPORT_METHOD(showBannerInView:(NSString *)placementId reactTag:(nonnull NSNumber *)reactTag callback:(RCTResponseSenderBlock)callback) {
   FYBBannerOptions *bannerOptions = [[FYBBannerOptions alloc] init];
   bannerOptions.placementId = placementId;
-  bannerOptions.admobBannerSize = FYBAdMobBannerSizeFlexibleWidthPortrait
-  bannerOptions.facebookBannerSize = FYBFacebookBannerSizeFlexibleWidthHeight50
+  bannerOptions.admobBannerSize = FYBAdMobBannerSizeFlexibleWidthPortrait;
+  bannerOptions.facebookBannerSize = FYBFacebookBannerSizeFlexibleWidthHeight50;
   UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
 
   if (view != NULL) {
